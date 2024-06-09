@@ -399,9 +399,8 @@ const VoiceVisualizer = ({
   return (
     <div className={`voice-visualizer ${mainContainerClassName ?? ""}`}>
       <div
-        className={`voice-visualizer__canvas-container ${
-          canvasContainerClassName ?? ""
-        }`}
+        className={`voice-visualizer__canvas-container ${canvasContainerClassName ?? ""
+          }`}
         ref={canvasContainerRef}
         style={{ width: formatToInlineStyleValue(width) }}
       >
@@ -435,9 +434,8 @@ const VoiceVisualizer = ({
         )}
         {isAudioProcessingTextShown && isProcessingRecordedAudio && (
           <p
-            className={`voice-visualizer__canvas-audio-processing ${
-              audioProcessingTextClassName ?? ""
-            }`}
+            className={`voice-visualizer__canvas-audio-processing ${audioProcessingTextClassName ?? ""
+              }`}
             style={{ color: mainBarColor }}
           >
             Processing Audio...
@@ -449,9 +447,8 @@ const VoiceVisualizer = ({
           !isMobile &&
           isProgressIndicatorOnHoverShown && (
             <div
-              className={`voice-visualizer__progress-indicator-hovered ${
-                progressIndicatorOnHoverClassName ?? ""
-              }`}
+              className={`voice-visualizer__progress-indicator-hovered ${progressIndicatorOnHoverClassName ?? ""
+                }`}
               style={{
                 left: hoveredOffsetX,
               }}
@@ -459,10 +456,9 @@ const VoiceVisualizer = ({
               {isProgressIndicatorTimeOnHoverShown && (
                 <p
                   className={`voice-visualizer__progress-indicator-hovered-time 
-                    ${
-                      canvasCurrentWidth - hoveredOffsetX < 70
-                        ? "voice-visualizer__progress-indicator-hovered-time-left"
-                        : ""
+                    ${canvasCurrentWidth - hoveredOffsetX < 70
+                      ? "voice-visualizer__progress-indicator-hovered-time-left"
+                      : ""
                     } 
                     ${progressIndicatorTimeOnHoverClassName ?? ""}`}
                 >
@@ -474,13 +470,12 @@ const VoiceVisualizer = ({
             </div>
           )}
         {isProgressIndicatorShown &&
-        isAvailableRecordedAudio &&
-        !isProcessingRecordedAudio &&
-        duration ? (
+          isAvailableRecordedAudio &&
+          !isProcessingRecordedAudio &&
+          duration ? (
           <div
-            className={`voice-visualizer__progress-indicator ${
-              progressIndicatorClassName ?? ""
-            }`}
+            className={`voice-visualizer__progress-indicator ${progressIndicatorClassName ?? ""
+              }`}
             style={{
               left:
                 timeIndicatorStyleLeft < canvasCurrentWidth - 1
@@ -490,13 +485,12 @@ const VoiceVisualizer = ({
           >
             {isProgressIndicatorTimeShown && (
               <p
-                className={`voice-visualizer__progress-indicator-time ${
-                  canvasCurrentWidth -
-                    (currentAudioTime * canvasCurrentWidth) / duration <
+                className={`voice-visualizer__progress-indicator-time ${canvasCurrentWidth -
+                  (currentAudioTime * canvasCurrentWidth) / duration <
                   70
-                    ? "voice-visualizer__progress-indicator-time-left"
-                    : ""
-                } ${progressIndicatorTimeClassName ?? ""}`}
+                  ? "voice-visualizer__progress-indicator-time-left"
+                  : ""
+                  } ${progressIndicatorTimeClassName ?? ""}`}
               >
                 {formattedRecordedAudioCurrentTime}
               </p>
@@ -522,11 +516,10 @@ const VoiceVisualizer = ({
             {isRecordingInProgress && (
               <div className="voice-visualizer__btn-container">
                 <button
-                  className={`voice-visualizer__btn-left ${
-                    isPausedRecording
-                      ? "voice-visualizer__btn-left-microphone"
-                      : ""
-                  }`}
+                  className={`voice-visualizer__btn-left ${isPausedRecording
+                    ? "voice-visualizer__btn-left-microphone"
+                    : ""
+                    }`}
                   onClick={togglePauseResume}
                 >
                   <img
@@ -538,11 +531,10 @@ const VoiceVisualizer = ({
             )}
             {!isCleared && (
               <button
-                className={`voice-visualizer__btn-left ${
-                  isRecordingInProgress || isProcessingStartRecording
-                    ? "voice-visualizer__visually-hidden"
-                    : ""
-                }`}
+                className={`voice-visualizer__btn-left ${isRecordingInProgress || isProcessingStartRecording
+                  ? "voice-visualizer__visually-hidden"
+                  : ""
+                  }`}
                 onClick={togglePauseResume}
                 disabled={isProcessingRecordedAudio}
               >
@@ -554,11 +546,10 @@ const VoiceVisualizer = ({
             )}
             {isCleared && (
               <button
-                className={`voice-visualizer__btn-center relative ${
-                  isProcessingStartRecording
-                    ? "voice-visualizer__btn-center--border-transparent"
-                    : ""
-                }`}
+                className={`voice-visualizer__btn-center relative ${isProcessingStartRecording
+                  ? "voice-visualizer__btn-center--border-transparent"
+                  : ""
+                  }`}
                 onClick={startRecording}
                 disabled={isProcessingStartRecording}
               >
@@ -571,11 +562,10 @@ const VoiceVisualizer = ({
               </button>
             )}
             <button
-              className={`voice-visualizer__btn-center voice-visualizer__btn-center-pause ${
-                !isRecordingInProgress
-                  ? "voice-visualizer__visually-hidden"
-                  : ""
-              }`}
+              className={`voice-visualizer__btn-center voice-visualizer__btn-center-pause ${!isRecordingInProgress
+                ? "voice-visualizer__visually-hidden"
+                : ""
+                }`}
               onClick={stopRecording}
             >
               <img src={stopIcon} alt="Stop" />
@@ -583,9 +573,8 @@ const VoiceVisualizer = ({
             {!isCleared && (
               <button
                 onClick={clearCanvas}
-                className={`voice-visualizer__btn ${
-                  controlButtonsClassName ?? ""
-                }`}
+                className={`voice-visualizer__btn ${controlButtonsClassName ?? ""
+                  }`}
                 disabled={isProcessingRecordedAudio}
               >
                 Clear
@@ -594,9 +583,8 @@ const VoiceVisualizer = ({
             {isDownloadAudioButtonShown && recordedBlob && (
               <button
                 onClick={saveAudioFile}
-                className={`voice-visualizer__btn ${
-                  controlButtonsClassName ?? ""
-                }`}
+                className={`voice-visualizer__btn ${controlButtonsClassName ?? ""
+                  }`}
                 disabled={isProcessingRecordedAudio}
               >
                 Download Audio

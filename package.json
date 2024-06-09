@@ -1,12 +1,12 @@
 {
-  "name": "react-voice-visualizer",
+  "name": "react-native-voice-visualizer",
   "private": false,
   "version": "2.0.1",
   "type": "module",
   "author": "Yurii Zarytskyi",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YZarytskyi/react-voice-visualizer.git"
+    "url": "git+https://github.com/saad189/react-native-voice-visualizer.git"
   },
   "description": "React library for audio recording and visualization using Web Audio API",
   "license": "MIT",
@@ -30,21 +30,21 @@
     "voice recording",
     "mediaDevices",
     "getUserMedia",
-    "react",
+    "react-native",
     "reactjs",
     "library"
   ],
   "files": [
     "dist"
   ],
-  "main": "./dist/react-voice-visualizer.umd.cjs",
-  "module": "./dist/react-voice-visualizer.js",
+  "main": "./dist/react-native-voice-visualizer.umd.cjs",
+  "module": "./dist/react-native-voice-visualizer.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/react-voice-visualizer.js",
-      "require": "./dist/react-voice-visualizer.umd.cjs"
+      "import": "./dist/react-native-voice-visualizer.js",
+      "require": "./dist/react-native-voice-visualizer.umd.cjs"
     }
   },
   "scripts": {
@@ -73,7 +73,10 @@
     "vite-plugin-dts": "^3.5.3"
   },
   "bugs": {
-    "url": "https://github.com/YZarytskyi/react-voice-visualizer/issues"
+    "url": "https://github.com/YZarytskyi/react-native-voice-visualizer/issues"
   },
-  "homepage": "https://github.com/YZarytskyi/react-voice-visualizer#readme"
+  "homepage": "https://github.com/YZarytskyi/react-native-voice-visualizer#readme",
+  "dependencies": {
+    "react-native": "^0.74.2"
+  }
 }

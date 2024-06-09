@@ -27,8 +27,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.tsx"),
-      name: "react-voice-visualizer",
-      fileName: "react-voice-visualizer",
+      name: "react-native-voice-visualizer",
+      fileName: "react-native-voice-visualizer",
     },
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
